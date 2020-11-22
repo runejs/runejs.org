@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'rune-root',
+    selector: 'rs-root',
     templateUrl: './app.component.html',
-    styleUrls: [ './app.component.scss' ]
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    title = 'runejs-web';
+    title = 'runejs-website';
 }

@@ -3,21 +3,24 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "runejs-web": {
+        "runejs-website": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
                     "style": "scss"
+                },
+                "@schematics/angular:application": {
+                    "strict": true
                 }
             },
             "root": "",
             "sourceRoot": "src",
-            "prefix": "rune",
+            "prefix": "rs",
             "architect": {
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/runejs-web",
+                        "outputPath": "dist/runejs-website",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -43,7 +46,6 @@
                             "optimization": true,
                             "outputHashing": "all",
                             "sourceMap": false,
-                            "extractCss": true,
                             "namedChunks": false,
                             "extractLicenses": true,
                             "vendorChunk": false,
@@ -51,13 +53,13 @@
                             "budgets": [
                                 {
                                     "type": "initial",
-                                    "maximumWarning": "2mb",
-                                    "maximumError": "5mb"
+                                    "maximumWarning": "500kb",
+                                    "maximumError": "1mb"
                                 },
                                 {
                                     "type": "anyComponentStyle",
-                                    "maximumWarning": "6kb",
-                                    "maximumError": "10kb"
+                                    "maximumWarning": "2kb",
+                                    "maximumError": "4kb"
                                 }
                             ]
                         }
@@ -66,18 +68,18 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "runejs-web:build"
+                        "browserTarget": "runejs-website:build"
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "runejs-web:build:production"
+                            "browserTarget": "runejs-website:build:production"
                         }
                     }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "runejs-web:build"
+                        "browserTarget": "runejs-website:build"
                     }
                 },
                 "test": {
@@ -114,16 +116,16 @@
                     "builder": "@angular-devkit/build-angular:protractor",
                     "options": {
                         "protractorConfig": "e2e/protractor.conf.js",
-                        "devServerTarget": "runejs-web:serve"
+                        "devServerTarget": "runejs-website:serve"
                     },
                     "configurations": {
                         "production": {
-                            "devServerTarget": "runejs-web:serve:production"
+                            "devServerTarget": "runejs-website:serve:production"
                         }
                     }
                 }
             }
         }
     },
-    "defaultProject": "runejs-web"
+    "defaultProject": "runejs-website"
 }
