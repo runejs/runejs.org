@@ -1,0 +1,14 @@
+@import '../../../theme';
+
+.mat-toolbar {
+    background-color: black;
+    color: white;
+    border-bottom: 2px solid $brown;
+    display: flex;
+    align-items: center;
+
+    h1 {
+        margin: 0;
+        flex: 1 1 auto;
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "runejs-website": {
+      "hosting": {
+        "runejs-website": [
+          "runejs-website"
+        ]
+      }
+    }
+  }
+}

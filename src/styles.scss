@@ -1,25 +1,20 @@
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
+@import 'theme';
 @import '~@angular/material/theming';
-// Plus imports for other components in your app.
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat-core();
+$custom-typography: mat-typography-config(
+    $font-family: 'Arial, Helvetica, sans-serif',
+    $body-1: mat-typography-level(16px, 24px, 500)
+);
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$runejs-website-primary: mat-palette($mat-indigo);
-$runejs-website-accent: mat-palette($mat-pink, A200, A100, A400);
+@include mat-core($custom-typography);
 
-// The warn palette is optional (defaults to red).
 $runejs-website-warn: mat-palette($mat-red);
 
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$runejs-website-theme: mat-light-theme((
+
+$runejs-website-primary: mat-palette($brown-palette);
+$runejs-website-accent: mat-palette($green-palette);
+
+$runejs-website-theme: mat-dark-theme((
     color: (
         primary: $runejs-website-primary,
         accent: $runejs-website-accent,
@@ -27,12 +22,19 @@ $runejs-website-theme: mat-light-theme((
     )
 ));
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include angular-material-theme($runejs-website-theme);
+$runejs-website-scroll-primary: mat-palette($brown-palette);
+$runejs-website-scroll-accent: mat-palette($green-palette);
 
-/* You can add global styles to this file, and also import other style files */
+$runejs-website-scroll-theme: mat-light-theme((
+    color: (
+        primary: $runejs-website-scroll-primary,
+        accent: $runejs-website-scroll-accent,
+        warn: $runejs-website-warn,
+    )
+));
+
+
+@include angular-material-theme($runejs-website-theme);
 
 html, body {
     height: 100%;
@@ -40,5 +42,55 @@ html, body {
 
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    background: black url('assets/rsbg.png') repeat;
+}
+
+.rs-scroll {
+    @include angular-material-theme($runejs-website-scroll-theme);
+
+    width: 765px;
+    margin: 16px auto;
+    min-height: 100px;
+    background: transparent url('assets/scroll/backdrop_745.gif') repeat-y center top;
+    color: black;
+    position: relative;
+    padding: 48px 32px;
+    box-sizing: border-box;
+
+    a {
+        font-weight: 700;
+        color: $scroll-brown;
+        text-decoration: none;
+    }
+
+    strong {
+        font-weight: 700;
+    }
+
+    p {
+        margin: 0;
+
+        ~ p {
+            margin-top: 16px;
+        }
+    }
+
+    &::before, &::after {
+        content: ' ';
+        display: block;
+        width: 765px;
+        height: 50px;
+        background: transparent no-repeat center center;
+        position: absolute;
+        left: 0;
+    }
+    &::before {
+        background-image: url('assets/scroll/backdrop_765_top.gif');
+        top: -16px;
+    }
+    &::after {
+        background-image: url('assets/scroll/backdrop_765_bottom.gif');
+        bottom: -16px;
+    }
 }
