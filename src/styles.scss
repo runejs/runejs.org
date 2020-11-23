@@ -58,6 +58,12 @@ body {
     padding: 48px 32px;
     box-sizing: border-box;
 
+    @media screen and (max-width: 765px) {
+        width: calc(100% - 16px);
+        background-size: contain;
+        margin: 16px 8px;
+    }
+
     a {
         font-weight: 700;
         color: $scroll-brown;
@@ -84,13 +90,25 @@ body {
         background: transparent no-repeat center center;
         position: absolute;
         left: 0;
+
+        @media screen and (max-width: 765px) {
+            width: calc(100% + 16px);
+            background-size: contain;
+            left: -8px;
+        }
     }
     &::before {
         background-image: url('assets/scroll/backdrop_765_top.gif');
         top: -16px;
+        @media screen and (max-width: 765px) {
+            top: -24px;
+        }
     }
     &::after {
         background-image: url('assets/scroll/backdrop_765_bottom.gif');
         bottom: -16px;
+        @media screen and (max-width: 765px) {
+            bottom: -24px;
+        }
     }
 }
