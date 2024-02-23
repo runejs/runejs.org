@@ -4,10 +4,10 @@ import { FooterComponent } from './footer.component';
 
 
 @NgModule({
-    declarations: [FooterComponent],
-    imports: [
-        CommonModule
-    ]
+  declarations: [FooterComponent],
+  imports: [
+    CommonModule
+  ]
 })
 export class FooterModule {
 }

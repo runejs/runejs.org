@@ -1,18 +1,54 @@
 <div class="rs-home">
-    <img class="rs-runejs-logo" src="assets/runejs.png" alt="RuneJS" />
+  <section class="rs-scroll rs-home-scroll">
+    <img class="rs-runejs-logo" src="assets/runejs.png" alt="RuneJS"/>
 
-    <section class="rs-scroll rs-home-scroll">
-        <p><strong>RuneJS</strong> is a RuneScape game server emulator written in ES6 and TypeScript. The goal of the project is to create a
-            flexible game server that is easy to interface with, while also providing powerful content development systems.
-            The simple content APIs allow for junior developers to pull down the codebase and get up and running writing
-            new features in less time, and learning more along the way.</p>
+    <p><strong>RuneJS</strong> is a RuneScape game server emulator written in ES6 and TypeScript. The goal of the
+      project is to create a
+      flexible game server that is easy to interface with, while also providing powerful content development systems.
+      The simple content APIs allow for junior developers to pull down the codebase and get up and running writing
+      new features in less time, and learning more along the way.</p>
 
-        <p>The game server is based around the <code>435</code> revision of the game, which was a game update made in October of 2006.
-            There are not any plans to convert it to other versions at this time.</p>
+    <p>The game server is based around the <code>435</code> revision of the game, which was a game update made in
+      October of 2006.
+      There are not any plans to convert it to other versions at this time.</p>
 
-        <p>RuneJS is completely open-source and open to all pull requests and/or issues. Many plugins have been added by
-            contributor pull requests and we're always happy to have more. Check out our
-            <a href="https://discord.gg/5P74nSh">Discord</a> server if you'd like to help us out, or provide input
-            on new features!</p>
-    </section>
+    <p>RuneJS is completely open-source and open to all pull requests and/or issues. Many plugins have been added by
+      contributor pull requests and we're always happy to have more. Check out our
+      <a href="https://discord.gg/5P74nSh">Discord</a> server if you'd like to help us out, or provide input
+      on new features!</p>
+
+    <h1 class="mat-display-2">Quick Setup</h1>
+
+    <h2 class="mat-title">Requirements</h2>
+
+    <p><a href="https://nodejs.org/en/" target="_blank">Node.JS</a> is required to run the game server.
+      Download and install the Node v14 here:
+      <a href="https://nodejs.org/en/blog/release/v14.17.3" target="_blank">https://nodejs.org/en/blog/release/v14.17.3</a></p>
+
+    <p><a href="https://www.java.com/en/" target="_blank">Java</a> is required to run the game client.
+      You can find the latest version of Java here:
+      <a href="https://www.java.com/en/download/" target="_blank">https://www.java.com/en/download/</a></p>
+
+    <p><a href="https://git-scm.com/" target="_blank">Git</a> and basic Git knowledge are required
+      to install the game server.</p>
+
+    <h2 class="mat-title">Installation</h2>
+
+    <p>To start, either pull down or fork the main
+      <strong>@runejs/server</strong> repository from Github:</p>
+
+    <pre><code>git clone git@github.com:runejs/server.git</code></pre>
+
+    <p>Go into the repo via a Terminal or Command Line and install the server's Node modules:</p>
+
+    <pre><code>npm install</code></pre>
+
+    <p>Then start the server:</p>
+
+    <pre><code>npm start</code></pre>
+
+    <p>The game server should spin up and be available on port 43594 by default. Connect via the recommended RuneScape game client and enjoy!</p>
+
+    <img class="rjs-screenshot" src="assets/screenshot-1.png" alt="In-Game Screenshot" />
+  </section>
 </div>

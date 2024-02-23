@@ -1,14 +1,19 @@
 @import '../../../theme';
 
 .mat-toolbar {
-    background-color: black;
-    color: white;
-    border-bottom: 2px solid $brown;
-    display: flex;
-    align-items: center;
+  background-color: black;
+  color: white;
+  border-bottom: 2px solid $brown;
+  display: flex;
+  align-items: center;
 
-    h1 {
-        margin: 0;
-        flex: 1 1 auto;
+  .rjs-logo {
+    margin: 0;
+    flex: 1 1 auto;
+
+    img {
+      display: block;
+      height: 70px;
     }
+  }
 }

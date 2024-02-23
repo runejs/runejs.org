@@ -1,12 +1,28 @@
 .rs-home {
-    img.rs-runejs-logo {
-        display: block;
-        margin: 42px auto 64px;
-        max-width: 100%;
-    }
+  img.rs-runejs-logo {
+    display: block;
+    margin: 0 auto 32px;
+    height: 124px;
+  }
 
-    .rs-home-scroll {
-        padding-top: 64px;
-        padding-bottom: 64px;
-    }
+  .rs-home-scroll {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    margin-top: 64px;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 84px 0 48px;
+  }
+
+  h2:not(:first-of-type) {
+    margin-top: 24px;
+  }
+
+  .rjs-screenshot {
+    display: block;
+    max-width: 100%;
+    margin-top: 24px;
+  }
 }
